@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Dark-Gray: hsl(0, 0%, 55%);
+    --Very-Dark-Gray: hsl(0, 0%, 41%);
+    font-size: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body  {
+    font-family: 'Josefin Sans';
+}
+
+h1, h2 {
+    font-family: 'Josefin Sans';
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+header {
+    padding-inline: 8rem;
+    position: absolute;
+    width: 100%;
+}
+
+.open,
+.close {
+    display: none;
+}
+
+.logo {
+    margin-block: 4rem;
+    z-index: 999;
+    position: relative;
+}
+
+div {
+    width: fit-content;
+}
+
+p{
+    max-width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+
+    }
+}
+
+nav a:not(:last-child) {
+    margin-right: 2rem;
+}
+
+h1 {
+    font-size: 4rem;
+    max-width: 15ch;
+    color: #fff;
+    padding: 1em;
+    border: 3px solid #fff;
+    margin-left: 8rem;
+    line-height: 1;
+}
+
+.hero {
+    background-image: url(img/desktop/image-hero.jpg);
+    background-size: cover;
+    width: 100%;
+    padding-block: 15rem 10rem;
+}
+
+.interactive {
+    margin-block: 9rem;
+    padding-inline: 8rem 0;
+    display: flex;
+    align-items: last baseline;
+    flex-wrap: wrap;
+    justify-content: center;
+    img {
+        flex: 1;
+    }
+}
+
+
+
+
+h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-block: 1rem;
+    line-height: 1;
+    margin-bottom: 1em;
+}
+
+.int-txt {
+    flex: 1;
+    background-color: #fff;
+    padding: 6rem 0 0 6rem;
+    position: relative;
+    right: 12rem;
+    max-width: 60ch;
+
+    h2 {
+        font-size: 3.5rem;
+    }
+}
+
+p {
+    color: var(--Very-Dark-Gray);
+    line-height: 1.7;
+}
+
+.us {
+    padding-inline: 8rem;
+    margin-inline: auto;
+    margin-bottom: 5rem;
+}
+
+.creation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.creation a {
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    outline: 1px solid #000;
+    transition: .3s ease-in;
+}
+
+.creation a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.first-row img {
+    transition: all .4s ease-in .1s;
+}
+
+.first-row,
+.second-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    margin-inline: auto;
+}
+
+.first-row div,
+.second-row div {
+    position: relative;
+}
+
+.first-row h2,
+.second-row h2 {
+    margin: 0;
+    max-width: 8ch;
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    color: #fff;
+    font-weight: 200;
+    
+}
+
+footer {
+    padding: 4rem 8rem;
+    background-color: #000;
+}
+
+
+.footer-logo,
+.sec-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-logo {
+    margin-bottom: 1rem;
+}
+
+.socials img {
+    margin-left: 1rem;
+}
+
+.sec-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    margin-right: 2rem;
+    
+}
+
+.first-row img:hover {
+    cursor: pointer;
+    filter: grayscale(100%);
+    transform: scale(1.1);
+}
+
+.first-row img:hover h2 {
+    color: #000;
+}
+
+
+
+@media screen and (max-width:1280px) {
+    
+    .interactive {
+        padding-inline: 8rem 8rem;
+    }
+    .int-txt {
+        padding: 0;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 100%;
+        position: static;
+        margin-top: 3rem;
+
+        p {
+            max-width: 80%;
+            margin: auto;
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .open {
+        display: inline;
+    }
+    .nav-items{
+        padding-top: 25vh;
+        gap: 5rem;
+        padding-left: 2rem;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        z-index: 500;
+        opacity: 0;
+        transition: .5s ease;
+    }
+
+    .nav-items a {
+        text-transform: uppercase;
+        font-size: 2rem;
+        
+    }
+
+    header {
+        padding-inline: 2rem;
+    }
+
+    .open,
+    .close {
+        position: absolute;
+        z-index: 999;
+        top: 4rem;
+        right: 2rem;
+    }
+    
+    .close {
+        display: none;
+    }
+    
+    .hero h1 {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .hero {
+        background-image: url(img/mobile/image-hero.jpg);
+        padding-inline: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .interactive h2 {
+        font-size: 2rem;
+        max-width: 100%;
+        margin-inline: 0;
+    }
+
+    .interactive {
+        max-width: 100%;
+        padding: 2rem;
+        margin-block: 3rem;
+    }
+
+    .interactive img {
+        flex: 0;
+        width: 360px;
+        max-width: 700px;
+        content: url(img/mobile/image-interactive.jpg);
+    }
+
+    .us {
+        padding-inline: 2rem;
+    }
+
+    .first-row {
+        margin: 0;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .creation {
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: 2rem;
+    }
+
+    
+
+    .img1 {
+        content: url(img/mobile/image-deep-earth.jpg);
+    }
+
+    .img2 {
+        content: url(img/mobile/image-night-arcade.jpg);
+    }
+
+    .img3 {
+        content: url(img/mobile/image-soccer-team.jpg);
+    }
+
+    .img4 {
+        content: url(img/mobile/image-grid.jpg);
+    }
+
+    .img5 {
+        content: url(img/mobile/image-from-above.jpg);
+    }
+
+    .img6 {
+        content: url(img/mobile/image-pocket-borealis.jpg);
+    }
+
+    .img7 {
+        content: url(img/mobile/image-curiosity.jpg);
+    }
+
+    .img8 {
+        content: url(img/mobile/image-fisheye.jpg);
+    }
+
+    .first-row h2 {
+        font-size: 1.7rem;
+    }
+
+    footer {
+        padding-inline: 2rem;
+    }
+
+    .footer-logo,
+    .sec-nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        margin-bottom: 1rem;
+    }
+
+    .sec-nav a {
+        display: block;
+        margin-block: 1rem;
+        margin-right: 0;
+    }
+
+    .first-row img:hover {
+        cursor: pointer;
+        filter: grayscale(100%);
+        transform: scale(1.1);
+    }
+
+
+}
